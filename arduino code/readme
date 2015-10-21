@@ -1,0 +1,6 @@
+This code runs on an Arduino UNO board, connected with an ESP 8266. See the source code for precise instructions on setting everything up.
+
+It scans nearby WiFi networks, and uses the detected signal level, together with data about local illumination and movements, to control the illumination from the seat.
+
+Code by Andrea Fasolo Rao for 2MONOCHANNELS
+raoandrea@gmail.com - giorgos@2monochannels.com
