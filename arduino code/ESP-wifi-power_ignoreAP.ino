@@ -1,76 +1,55 @@
-#include <ESP8266WiFi.h>
+/* 
+ *  
+ *  This code is meant to be upload to a ESP8266 01 wifi module
+ *  
+ *  Refer to this guide to connect the ESP to Arduino UNO or MEGA:
+ *  http://www.instructables.com/id/noobs-guide-to-ESP8266-with-Arduino-Mega-2560-or-U/
+ *  
+ *  The ESP8266WiFi library is required:
+ *  https://github.com/esp8266/Arduino
+ *  
+ *  This code, upon receiving a "getdata" request from the serial port, scans the wifi networks nearby,
+ *  and gives back via serial port, as absolut number, the power in dBm of the most powerful network.
+ *  
+ *  Created in October 2015 - Andrea Fasolo Rao for 2MONOCHANNELS
+ *  raoandrea@gmail.com - giorgos@2monochannels.com
+ *  
+ */
 
 
-//ESP8266WiFiMulti wifiMulti;
-//WiFiClient client;
+#include <ESP8266WiFi.h> // ESP8266 Library
 
-unsigned long waittime = 5000; //waiting time between scans
+unsigned long waittime = 5000;      //wait time between networks scans
 unsigned long lastscan = millis();
 
-//int IDs[20];
-//String SSIDs[20];
-//int power[40];
-
-int bestNetworkID = 99;
-int bestNetworkPower = 99;
-int worstNetworkID = 99;
-String bestNetworkSSID;
+int bestNetworkID = 99;     //ID of the most powerful network 
+int bestNetworkPower = 99;  //power in dBm of the most powerful network
+int worstNetworkID = 99;    //ID of the less powerful network, unused
+String bestNetworkSSID;     //SSID of the most powerful network
 
 String inputString = "";         // a string to hold incoming data
 boolean stringComplete = false;  // whether the string is complete
 
-void setup() {
+void setup() {               //this code runs once
   
-  Serial.begin(115200);
+  Serial.begin(115200);     //start serial communication. Speed depends on the revision of the module
   delay(10);
-
-  for (int i = 0; i<40; i++){
-    //IDs[i] = 99;
-    //SSIDs[i] = "";
-    //power[i] = 0;
-  }
-
+  
 }
 
-void loop() {
+void loop() {               //this code keeps repeating
 
-  serialEvent(); //check if data comming from serial port
-    if (stringComplete) {
-     // Serial.println("ok");
-      String bb=inputString.substring(0, 7);
-     // Serial.println(bb);
-      //Serial.println(bb.length());
-      if (bb=="getdata"){  //if cmd "getdata"
-         Serial.println(getdata());
+  serialEvent();            //check if data comming from serial port
+
+    if (stringComplete) {                     //if the received String is complete...
+      String bb=inputString.substring(0, 7);  //takes its first 7 characterss
+      if (bb=="getdata"){                     //if the incoming String is "getdata"
+         Serial.println(getdata());           //prints the result of the getdata() method, see line 56
          Serial.println();
       }
-      inputString = "";
-      stringComplete = false;
+      inputString = "";                       //the String with the incoming characters is cleared
+      stringComplete = false;                 //and the conditions set to false
     }
-
-/*
-  while ( (millis()-lastscan > waittime)){
-    listNetworks();
-    lastscan = millis();
-    Serial.println();
-    
-  }
-
-  */
-  /*
-  while ( (millis()-lastscan > waittime)){
-    bestNetworkID = 99;
-    worstNetworkID = 99;
-      for (int i = 0; i<40; i++){
-    }
-    
-    Serial.println("Scanning networks");
-    listNetworks();
-    lastscan = millis();
-    Serial.println();
-  }
-
-  */
 
 }
 
@@ -78,136 +57,49 @@ String getdata(){
 
     bestNetworkID = 99;
     worstNetworkID = 99;
-    //  for (int i = 0; i<40; i++){
-    //}
     
-    //Serial.println("Scanning networks");
-    listNetworks();
+    listNetworks();     //runs listNetwork() method, see line 78
 
     String message1 = String(bestNetworkPower);
-    String message = String(message1+";");
-    return message;
+    String message = String(message1+";");      //attaching a ";" character to the power of the best network
+    return message;                             //this the value that will be sent via serial to the Arduino UNO
 }
 
 void serialEvent() {
-      while (Serial.available()) {
-          // get the new byte:
-          char inChar = (char)Serial.read();
-          // add it to the inputString:
-          inputString += inChar;
-         // Serial.println(inChar);
-          // if the incoming character is a newline, set a flag
-          if (inChar == '\n') {
+      while (Serial.available()) {            //when the serial port is free...
+          char inChar = (char)Serial.read();  //get the new byte from the serial port
+          inputString += inChar;              //add it to the inputString
+          if (inChar == '\n') {               //if the incoming character is a newline, set the string as complete
                 stringComplete = true;
           }
       }
 }
 
 void listNetworks() {
-  // scan for nearby networks:
-  //Serial.println("** Scan Networks **");
-  int numSsid = WiFi.scanNetworks();
-  if (numSsid == -1) {
-    Serial.println("Couldn't get a wifi connection");
-    bestNetworkPower = -99;
-    while (true);
+  int numSsid = WiFi.scanNetworks();                  // scan for nearby networks:
+  if (numSsid == -1) {                                //if there are no networks...
+    Serial.println("Couldn't get a wifi connection"); //...prints an error
+    bestNetworkPower = -99;                           //...and sets an invalid value
+    while (true);                                     //wait to get networks SSIDs
     
   }
 
-  // print the list of networks seen:
-  //Serial.print("number of available networks:");
-  //Serial.println(numSsid);
-
-  // print the network number and name for each network found:
-  for (int thisNet = 0; thisNet < numSsid; thisNet++) { //gets data into the arrays
-    //SSIDs[thisNet] = WiFi.SSID(thisNet);
-    //power[thisNet] = WiFi.RSSI(thisNet);
-        
-    //Serial.print(thisNet);
-    //Serial.print(") ");
-    //Serial.print(WiFi.SSID(thisNet));
-    //Serial.print("\tSignal: ");
-    //Serial.print(WiFi.RSSI(thisNet));
-    //Serial.println(" dBm");
-    //Serial.print("\tEncryption: ");
-    //printEncryptionType(WiFi.encryptionType(thisNet));
-  }
-
-  // GET THE BEST CONNECTION
+  //get the best connection:
   bestNetworkID = 0;
-  for (int i = 1; i < numSsid; i++){
+  for (int i = 1; i < numSsid; i++){      //this cycle finds the most powerful network, ignoring the one from the seat itself
     if ((WiFi.RSSI(i) > WiFi.RSSI(bestNetworkID)) && (String(WiFi.SSID(i)) != "Wifi-seat")){
       bestNetworkID = i;
     }
   }
 
   worstNetworkID = 0;
-  for (int i = 1; i < numSsid; i++){
+  for (int i = 1; i < numSsid; i++){    //this cycle finds the less powerful network
     if (WiFi.RSSI(i) < WiFi.RSSI(worstNetworkID)){
       worstNetworkID = i;
     }
   }
 
-  bestNetworkPower = (WiFi.RSSI(bestNetworkID)*-1);
+  bestNetworkPower = (WiFi.RSSI(bestNetworkID)*-1);   //dBm values are negative, this turns it to positive for convenience
   bestNetworkSSID = WiFi.SSID(bestNetworkID);
 
-  //Serial.println(bestNetworkID);
-  /*
-  Serial.print("best connection is... ");
-  Serial.print(bestNetworkID);
-  Serial.print(": ");
-  Serial.print(WiFi.SSID(bestNetworkID));
-  Serial.print(", Power: ");
-  Serial.println(WiFi.RSSI(bestNetworkID));
-  
-  Serial.print("worst connection is... ");
-  Serial.print(worstNetworkID);
-  Serial.print(": ");
-  Serial.print(WiFi.SSID(worstNetworkID));
-  Serial.print(", Power: ");
-  Serial.println(WiFi.RSSI(worstNetworkID));
-  Serial.println();
-  */
 }
-/*
-void printEncryptionType(int thisType) {
-  // read the encryption type and print out the name:
-  switch (thisType) {
-    case ENC_TYPE_WEP:
-      Serial.println("WEP");
-      break;
-    case ENC_TYPE_TKIP:
-      Serial.println("WPA");
-      break;
-    case ENC_TYPE_CCMP:
-      Serial.println("WPA2");
-      break;
-    case ENC_TYPE_NONE:
-      Serial.println("None");
-      break;
-    case ENC_TYPE_AUTO:
-      Serial.println("Auto");
-      break;
-  }
-}
-
-void printMacAddress() {
-  // the MAC address of your Wifi shield
-  byte mac[6];
-
-  // print your MAC address:
-  WiFi.macAddress(mac);
-  Serial.print("MAC: ");
-  Serial.print(mac[5], HEX);
-  Serial.print(":");
-  Serial.print(mac[4], HEX);
-  Serial.print(":");
-  Serial.print(mac[3], HEX);
-  Serial.print(":");
-  Serial.print(mac[2], HEX);
-  Serial.print(":");
-  Serial.print(mac[1], HEX);
-  Serial.print(":");
-  Serial.println(mac[0], HEX);
-}
-//created by 2monochannels from andrea fasolo rao
