@@ -46,60 +46,60 @@
 Η κατασκευή και χρήση περιγράφεται στην ενότητα wiki. Οδηγίες για προγραμματιστές δίνονται στην ενότητα arduino code, με γενική περιγραφή και σχόλια μέσα στον κώδικα.
 
 ## Πίνακας Παραδοτέων
-ARDUINO CODE
-ESP-wifi-power_ignoreAP.ino
-readme
-wifi_seat_easy.ino
+ARDUINO CODE <br>
+ESP-wifi-power_ignoreAP.ino <br>
+readme <br>
+wifi_seat_easy.ino <br>
 
-COST ANALYSIS
-Cost Analysis
+COST ANALYSIS <br>
+Cost Analysis <br>
 
-DWG
-A-01_plan_elevation_section
-A-02_base
-A-03_box
-A-04_plexiglass
-base_complete
-base_sheet
-base_top_view
-box.jpg
-plexiglass.jpg
+DWG <br>
+A-01_plan_elevation_section <br> 
+A-02_base <br> 
+A-03_box <br> 
+A-04_plexiglass <br>
+base_complete <br>
+base_sheet <br>
+base_top_view <br>
+box.jpg <br>
+plexiglass.jpg <br>
 
-DXF
-A-01_plan_elevation_section
-A-02_base
-A-03_box
-A-04_plexiglass
-base_complete
-base_sheet
-base_top_view
-box.jpg
-plexiglass.jpg
+DXF <br>
+A-01_plan_elevation_section <br>
+A-02_base <br>
+A-03_box <br>
+A-04_plexiglass <br>
+base_complete <br>
+base_sheet <br>
+base_top_view <br>
+box.jpg <br>
+plexiglass.jpg <br>
 
-IMAGES
-board
-open_box
-box_reinforcement
-screw_fixing_1
-screw_fixing_2
-signal_1
-signal_2
-signal_3
-signal_4
-signal_5
-wi-fi_seat-A3_colours
-wi-fi_seat_day
-wi-fi_seat_night
+IMAGES <br>
+board <br>
+open_box <br>
+box_reinforcement <br> 
+screw_fixing_1 <br>
+screw_fixing_2 <br>
+signal_1 <br>
+signal_2 <br>
+signal_3 <br>
+signal_4 <br>
+signal_5 <br>
+wi-fi_seat-A3_colours <br>
+wi-fi_seat_day <br>
+wi-fi_seat_night <br>
 
-PDF
-A-01_plan_elevation_section
-A-02_base
-A-03_box
-A-04_plexiglass
+PDF <br>
+A-01_plan_elevation_section <br>
+A-02_base <br>
+A-03_box <br>
+A-04_plexiglass <br>
 
-ΓΕΝΙΚΑ ΑΡΧΕΙΑ
-README.md
-licence
-wi-fi_seat-construction_stages
-wi-fi_seat-intro
-ταυτότητα έργου
+ΓΕΝΙΚΑ ΑΡΧΕΙΑ <br>
+README.md <br> 
+licence <br>
+wi-fi_seat-construction_stages <br>
+wi-fi_seat-intro <br>
+ταυτότητα έργου <br>
