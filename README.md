@@ -44,3 +44,65 @@
 ## Οδηγίες Χρήσης
 
 Η κατασκευή και χρήση περιγράφεται στην ενότητα wiki. Οδηγίες για προγραμματιστές δίνονται στην ενότητα arduino code, με γενική περιγραφή και σχόλια μέσα στον κώδικα.
+
+## Πίνακας Παραδοτέων
+Τίτλος	URL
+ARDUINO CODE	
+ESP-wifi-power_ignoreAP.ino	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/arduino%20code/ESP-wifi-power_ignoreAP.ino
+readme	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/arduino%20code/readme
+wifi_seat_easy.ino	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/arduino%20code/wifi_seat_easy.ino
+	
+COST ANALYSIS	
+Cost Analysis	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/cost%20analysis/cost_analysis.xlsx
+	
+DWG	
+A-01_plan_elevation_section	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dwg/A-01_plan_elevation_section.dwg
+A-02_base	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dwg/A-02_base.dwg
+A-03_box	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dwg/A-03_box.dwg
+A-04_plexiglass	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dwg/A-04_plexiglass.dwg
+base_complete	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dwg/base_complete.jpg
+base_sheet	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dwg/base_sheet.jpg
+base_top_view	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dwg/base_top_view.jpg
+box.jpg	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dwg/box.jpg
+plexiglass.jpg	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dwg/plexiglass.jpg
+	
+DXF	
+A-01_plan_elevation_section	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dxf/A-01_plan_elevation_section.dxf
+A-02_base	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dxf/A-02_base.dxf
+A-03_box	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dxf/A-03_box.dxf
+A-04_plexiglass	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dxf/A-04_plexiglass.dxf
+base_complete	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dxf/base_complete.jpg
+base_sheet	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dxf/base_sheet.jpg
+base_top_view	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dxf/base_top_view.jpg
+box.jpg	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dxf/box.jpg
+plexiglass.jpg	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/dxf/plexiglass.jpg
+	
+IMAGES	
+board	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/board.pdf
+open_box	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/open_box.pdf
+box_reinforcement	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/plexiglass_reinforcement.pdf
+screw_fixing_1	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/screw_fixing_1.JPG
+screw_fixing_2	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/screw_fixing_2.JPG
+signal_1	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/signal_1.jpg
+signal_2	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/signal_2.jpg
+signal_3	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/signal_3.jpg
+signal_4	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/signal_4.jpg
+signal_5	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/signal_5.jpg
+wi-fi_seat-A3_colours	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/wi-fi_seat-A3_colours.jpg
+wi-fi_seat_day	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/wi-fi_seat_day.pdf
+wi-fi_seat_night	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/images/wi-fi_seat_night.pdf
+	
+PDF	
+A-01_plan_elevation_section	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/pdf/A-01_plan_elevation_section.pdf
+A-02_base	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/pdf/A-02_base.pdf
+A-03_box	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/pdf/A-03_box.pdf
+A-04_plexiglass	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/pdf/A-04_plexiglass.pdf
+	
+ΓΕΝΙΚΑ ΑΡΧΕΙΑ	
+README.md	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/README.md
+licence	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/licence
+wi-fi_seat-construction_stages	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/wi-fi_seat-construction_stages.pdf
+wi-fi_seat-intro	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/wi-fi_seat-intro.pdf
+ταυτότητα έργου	https://github.com/ellak-monades-aristeias/The_Wi-Fi_seat/blob/master/%CF%84%CE%B1%CF%85%CF%84%CF%8C%CF%84%CE%B7%CF%84%CE%B1_%CE%AD%CF%81%CE%B3%CE%BF%CF%85.pdf
+
+
