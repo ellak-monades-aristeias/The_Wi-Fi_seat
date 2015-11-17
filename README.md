@@ -7,6 +7,14 @@
 
 Επιπλέον, με τη χρήση πολλών τέτοιων καθισμάτων σε διαφορετικά σημεία, δημιουργείται και ένα εικαστικό έργο που αποτυπώνει την ένταση του δικτύου WI-Fi της περιοχής. Έτσι οπτικοποιείται ένα πρόσθετο επίπεδο πληροφορίας που συνδέεται με το δομημένο περιβάλλον.
 
+## Description
+
+This is a perspex (plexiglass) seat for outdoor use that includes a wi-fi router, thus enabling up to 8 people to use the internet. The seat may work as a stand-alone wi-fi source, or as a mesh network (in a group of seats) that expands the municipality hotspots.
+
+The seat is internally lit by led strips. The light colour is modified (from red to green) according to the strenght of the area wi-fi signal, the ambient lighting and nearby movement.
+
+As a result, the seat encourages people to use public space and acts as a light source, adding an extra  sense of security  at a low cost. A group of Wi-Fi seats act as an artwork, visualizing the signal strenght as an extra information layer in the urban fabric.
+
 ## Κατασκευή
 
 Το κάθισμα έχει μορφή κωνικού πενταγώνου, με τη μικρή διάμετρο στη βάση. Aποτελείται από τρία διακριτά στοιχεία: τη βάση, το περίβλημα και τον εσωτερικό πυρήνα.
